@@ -86,11 +86,10 @@ input:focus{
   border-radius: 1rem;
   color: var(--input-text-color)
 }
-.error-message{
+form article .error-message{
   color: var(--error-message-color);
   font-size: 0.65rem;
   font-weight: var(--main-text-font-weight);
-  margin-top: 0.3rem;
   font-style: italic;
   display: none;
   padding-left: 0.5rem;
@@ -209,6 +208,7 @@ footer > a{
     width: 100%;
     font-size: 0.7rem;
     margin-left: -1.3rem;
+    margin-top: 0.5rem;
   }
   form article{
     width: 60%;
