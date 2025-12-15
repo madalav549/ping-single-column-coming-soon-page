@@ -1,0 +1,220 @@
+:root{
+  --background: white;
+  --h1-color: hsl(0, 0%, 59%);
+  --main-text-color: hsl(209, 33%, 12%);
+  --input-text-border-color: hsl(223, 100%, 88%);
+  --input-text-color: hsl(209, 33%, 12%);
+  --button-background: hsl(223, 87%, 63%);
+  --button-color: white;
+  --error-message-color: hsl(354, 100%, 66%);
+  --icons-color: hsl(223, 87%, 63%);
+  --button-hover: 0.5;
+  --font-family: Libre Franklin;
+  --h1-strong-font-weight: 700;
+  --h1-font-weight-mobile: 300;
+  --h1-font-weight-desktop: 600;
+  --main-text-font-weight: 300;
+  --footer-text-color: hsl(0, 0%, 59%);
+}
+html{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+/*mobile design*/
+body{
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background);
+  font-family: var(--font-family);
+  justify-content: center;
+  align-items: center;
+}
+.logo-container{
+  display: flex;
+  align-items: center;justify-content: center;
+  margin-top: 5rem;
+}
+.logo-container img{
+  height: 0.95rem
+}
+.main-container{
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+}
+.main-container h1{
+  font-size: 1.15rem;
+  color: var(--h1-color);
+  font-weight: var(--h1-font-weight-mobile);
+}
+.main-container strong{
+  color: var(--main-text-color);
+  font-weight: var(--h1-strong-font-weight);
+}
+.main-container > p{
+  color: var(--main-text-color);
+  font-weight: var(--main-text-font-weight);
+  font-size: 0.7rem;
+}
+form{
+  width: 100%;
+  margin-top: 1.5rem;
+}
+input{
+  border: var(--input-text-border-color) solid 0.1rem;
+  width: 80%;
+  height: 1.5rem;
+  border-radius: 1rem;
+  color: var(--input-text-color);
+  padding-left: 1.3rem;
+}
+input:focus{
+  border: var(--input-text-border-color) solid 0.1rem;
+  outline: none;
+}
+::placeholder{
+  padding-left: 1.3rem;
+  color: var(--input-text-border-color)
+}
+.error-state{
+  border: var(--error-message-color) solid 0.1rem;
+  width: 80%;
+  height: 1.5rem;
+  border-radius: 1rem;
+  color: var(--input-text-color)
+}
+.error-message{
+  color: var(--error-message-color);
+  font-size: 0.65rem;
+  font-weight: var(--main-text-font-weight);
+  margin-top: 0.3rem;
+  font-style: italic;
+  display: none;
+  padding-left: 0.5rem;
+}
+form button{
+  border: none;
+  width: 95%;
+  height: 1.5rem;
+  background-color: var(--button-background);
+  color: var(--button-color);
+  font-weight: var(--h1-strong-font-weight);
+  margin-top: 0.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 0.2rem 0.3rem var(--button-background);
+  transition: all 0.5s ease-in-out;
+}
+form button:hover{
+  opacity: var(--button-hover);
+  cursor: pointer;
+}
+.illustration-dashboard-section{
+  width: 100%;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+.illustration-dashboard-section img{
+  width: 95%;
+}
+footer{
+  margin-top: 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.icon-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem
+}
+.icon-container a{
+  color: var(--button-background);
+  border: var(--input-text-border-color) 1px solid;
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+}
+footer > a{
+  text-decoration: none;
+  color: var(--h1-color);
+  font-weight: var(--main-text-font-weight);
+  font-size: 0.7rem;
+  margin-top: 1.5rem;
+}
+.icon-container a:hover{
+  color: white;
+  background-color: var(--button-background);
+  cursor: pointer;
+}
+/*Tablet and Desktop design*/
+@media all and (min-width: 768px){
+  .logo-container img{
+    height: 1.5rem;
+  }
+  .main-container{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-container h1{
+    font-size: 2rem;
+    font-weight: var(--h1-font-weight-desktop);
+  }
+  .main-container p{
+    font-size: 1rem;
+    margin-top: -1rem;
+  }
+  form{
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    width: 85%;
+    margin-top: 1rem;
+  }
+  input{
+    width: 95%;/*original was 60%*/
+    height: 2rem;
+  }
+  ::placeholder{
+    padding-left: 0.7rem;
+  }
+  form button{
+    width: 30%;
+    margin: 0;
+    /*margin-bottom: 1.5rem;*/
+    height: 2rem;
+    justify-self: center;
+    padding: 0;
+    margin: 0;
+  }
+  .icon-container a{
+    width: 2rem;
+    height: 2rem;
+  }
+  form article .error-message{
+    width: 100%;
+    font-size: 0.7rem;
+    margin-left: -1.3rem;
+  }
+  form article{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+}
